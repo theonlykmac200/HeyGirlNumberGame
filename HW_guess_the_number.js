@@ -24,7 +24,7 @@ const game = {
         if (playerGuess > this.secretNum) {
             alert(`Hey Girl, You're super smart but your guess is too high`)
         }else if (playerGuess < this.secretNum) {
-            alert(`Hey Girl, You're amazing in everyway, but your guess is too low `)  
+            alert(`Hey Girl, You're amazing in every way, but your guess is too low `)  
         }else if (playerGuess === this.secretNum) {
             alert(`Hey Girl! I never doubted you! You Guessed the Number in ${this.prevGuesses.length} guesses!`)
         }
