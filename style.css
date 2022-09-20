@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: whitesmoke;
+}
+
+h1 {
+    display: flexbox;
+    justify-content: center;
+    font-size: 100px;
+    color: blueviolet;
+}
