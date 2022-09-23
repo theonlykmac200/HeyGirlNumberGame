@@ -7,6 +7,12 @@ const game = {
     getGuess: function () {
         let playerGuess = parseInt(prompt(`Hey Girl! Enter a guess between ${this.smallestNum} and ${this.biggestNum} you've already guessed ${this.prevGuesses}`));    
         this.prevGuesses.push(playerGuess)
+
+        //alert user if guess is out of range
+        if (playerGuess > this.biggestNum || playerGuess < this.smallestNum) {
+            alert(`${playerGuess} is not within the guessing range`)
+        }
+
         return playerGuess
              
     },
@@ -17,7 +23,10 @@ const game = {
           let playerGuess 
           while (playerGuess != this.secretNum) {
             playerGuess= this.getGuess();  ///break the loop before the alert can trigger. 
-            this.render(playerGuess)
+              this.render(playerGuess)
+
+              //break the loop and close window if user hits cancel
+              if (!playerGuess) break
           }
       },
     render: function (playerGuess) {
